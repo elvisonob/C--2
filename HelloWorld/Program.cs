@@ -1,12 +1,8 @@
-﻿using System;
+﻿var words = new[] { "one", "two", "three", "four", "five" };
 
-namespace HelloWorld
+foreach(var word in words)
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello Elvis");
-        }
-    }
+    Console.WriteLine(word);
 }
+
+Console.ReadKey();
