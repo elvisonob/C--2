@@ -1,30 +1,22 @@
-﻿using System;
+﻿var numbers = new[] { 10, -8, 2, 12, -17 };
 
-namespace Coding.Exercise
+var positiveNumbers = GetPositiveNumbers(numbers);
+
+foreach(var number in positiveNumbers)
 {
-    public class Exercise
-    {
-        public List<string> GetOnlyUpperCaseWords(List<string> words)
-        {
-            //your code goes here
-            List<string> result = new List<string>();
-            foreach(var word in words)
-            {
-                bool isWordContains = true;
-foreach(var word2 in word)
-                {
-                    if (char.IsUpper(word2))
-                    {
-                        continue;
-                    }
+    Console.WriteLine(number);
+}
 
-                    if (isWordContains)
-                    {
-                        result.Add(word);
-                    }
-                }
-            }
-            return result;
+List<int> GetPositiveNumbers(int[] number)
+{
+    List<int> numberResult = new List<int>();
+    foreach(var numbers in number)
+    {
+        if (numbers > 0)
+        {
+            numberResult.Add(numbers);
         }
     }
+
+    return new List<int>(numberResult);
 }
